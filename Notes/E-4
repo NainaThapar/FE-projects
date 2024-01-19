@@ -12,6 +12,8 @@
             - Search 
             - ReastaurantContainer
                 - ReastaurantCard
+                    - Img
+                    - Name of Res, Star Rating, cuisine, delivery type
         - Footer
             - Copyrights
             - Links
