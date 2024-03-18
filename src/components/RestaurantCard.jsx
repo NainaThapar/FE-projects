@@ -7,7 +7,7 @@ const RestaurantCard = (props) => {
     // console.log(info)
     return(
         
-        <div className="p-4 m-4 w-64 border">
+        <div data-testid="resCard" className="p-4 m-4 w-64 border">
             <img alt="res-img" className="w-30 h-30" src={CDN_URL + cloudinaryImageId}></img>
             <h3 className="text-xl text-bold text-slate-500 py-4">{ name }</h3>
             <h4>{ cuisines.join(', ') }</h4>

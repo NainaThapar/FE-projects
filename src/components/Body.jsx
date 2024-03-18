@@ -24,7 +24,6 @@ const Body = () => {
         // console.log(json);
         setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setFilteredRes(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        console.log(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
 
     if(!isOnline) return <h1>You seem to be offline! Please check your internet connection.</h1>
@@ -33,7 +32,7 @@ const Body = () => {
         <div className="body">
             <div className="flex">
                 <div className="p-4">
-                    <input type= "text" className="border" value={searchText} onChange={(e) => {
+                    <input type= "text" data-testid="searchInput" className="border" value={searchText} onChange={(e) => {
                         setSearchText(e.target.value);
                     }} />
                     <button className="border border-lime-500 rounded-md px-4 mx-2 cursor-pointer" onClick={() => {
