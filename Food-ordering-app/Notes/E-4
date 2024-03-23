@@ -1,0 +1,22 @@
+# App Building
+
+1. **Food Ordering App**
+
+    - **Planning**
+    1. What you are going to build? What i the process of building it? How it would look (wireframe, mock ups)
+    2. Low level planning - components
+        - Header
+            - Logo
+            - Nav Items
+        - Body
+            - Search 
+            - ReastaurantContainer
+                - ReastaurantCard
+                    - Img
+                    - Name of Res, Star Rating, cuisine, delivery type
+        - Footer
+            - Copyrights
+            - Links
+            - Contact
+
+

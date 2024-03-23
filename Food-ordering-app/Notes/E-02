@@ -1,0 +1,79 @@
+** **Initial Setup** **
+# initialize git in our local (git init)
+# setup the remote repo
+
+Package.json : configuration for npm
+
+# Initialize and install npm (npm init) - craetes package.json
+
+
+Bundler : bundles/packages app properly so that it can be shipped to production
+--ex. webpack, parcel, veet
+--create react app used webpack as a bundler BTS.
+
+Two types of dependencies that can be installed:
+--Dev dependency - required for devlopment phase
+--Normal dependency - used in production also
+
+--Dependency version with carrot/tilde(^/~) 
+- ^ ensures it updates it's version automatically to the minor upgrade. (safer)
+- ~ installs the mjor upgrade automatically
+
+--Package-lock.json (locks the version) keeps record of the exact version.
+-integrity - has hash to verify that whatever is there on dev machine is the same version that is deployed on the production.
+
+--node_modules (acts like a db) contains the actual data of the dependencies/packages that the project needs.
+--Transitive Dependencies
+
+# git ignore - files that we don't want in production/git
+-Don't put on git whatever you can re-generate.
+
+--if we have package.json and package-lock.json, we can recreate all the node modules.
+
+**-----------------------------------------------------------------------------------------------------------------------------------------------------------------**
+
+** **Using Parcel to ignite our app** **
+# npx parcel (source file)
+
+- npm to install a package
+- npx means executing a package
+
+* Parcel:
+- goes to the source and build a dev build for our app (created dev build)
+- created local server & hosted app on server 
+- HMR = Hot Module Repacement.
+- Uses File Watching Algorithm (written in C++)
+- Caching - Faster Builds
+- Image Optimizations
+- Minification
+- Bundling
+- Compress
+- Consistent Hashing
+- Code splittting
+- Differential Bundling - support older browsers
+- Diagnostic
+- Error Handling
+- host app on HTTPs
+- Tree Shaking - remove unused code
+- Different dev and prod build 
+
+* CDN links not a preferred way to bring react into project.
+- fetcthing from CDN is a costly operation (makes a call to unpkg.com and fetches from there)
+- version control not manageable (manual)
+
+# normal install react and react-dom dependency
+
+# we now need to import this react from the package we just imported to use it in our program as it is no longer coming from CDN links.
+
+-- If we try to import react to our app.js which was used as a script tag in our html file, we will get an error as browser files cannot have import or exports.
+So we need to change our script tag as type = "module" and tell it that this is not a normal browser script but a module.
+
+--browserslist
+
+
+
+
+
+
+
+
